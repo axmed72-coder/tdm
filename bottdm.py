@@ -3,7 +3,9 @@ import requests
 import os
 
 app = Flask(__name__)
-
+app.route("/")
+def health_check():
+    return "OK"
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
@@ -28,4 +30,5 @@ def submit():
 
 if __name__ == "__main__":
     app.run()
+
 
