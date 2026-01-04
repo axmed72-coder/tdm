@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -34,7 +35,7 @@ form.addEventListener("submit", async (e) => {
   status.textContent = "Отправка...";
 
   try {
-    const res = await fetch("tdm-1.onrender.com", {
+    const res = await fetch("https://tdm-4.onrender.com"), {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify(data)
@@ -54,4 +55,5 @@ form.addEventListener("submit", async (e) => {
 
 </body>
 </html>
+
 
