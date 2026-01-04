@@ -4,8 +4,9 @@ import os
 
 app = Flask(__name__)
 
-BOT_TOKEN = os.getenv("8462126131:AAHX9lknojLex-N3Pq10AP-VBIy0f5XsXTg")
-CHAT_ID = os.getenv("8344514260")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
+
 
 @app.route("/submit", methods=["POST"])
 def submit():
@@ -27,3 +28,4 @@ def submit():
 
 if __name__ == "__main__":
     app.run()
+
