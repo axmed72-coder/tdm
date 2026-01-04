@@ -3,7 +3,8 @@ import requests
 import os
 
 app = Flask(__name__)
-app.route("/")
+
+@app.route("/")
 def health_check():
     return "OK"
 BOT_TOKEN = os.getenv("BOT_TOKEN")
@@ -14,7 +15,7 @@ CHAT_ID = os.getenv("CHAT_ID")
 def submit():
     data = request.json
 
-    text = f"""з
+    text = f"""
 📩 Новая заявка
 👤 Имя: {data.get('name')}
 📞 Контакт: {data.get('contact')}
@@ -29,6 +30,4 @@ def submit():
     return {"status": "ok"}
 
 if __name__ == "__main__":
-    app.run()
-
-
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
