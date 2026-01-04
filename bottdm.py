@@ -1,4 +1,5 @@
-from flask import Flask, request
+from flask_cors import CORS
+
 import requests
 import os
 
@@ -31,3 +32,4 @@ def submit():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
+
