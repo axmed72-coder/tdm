@@ -16,6 +16,7 @@ body {
 }
 
 .card {
+  color: white;
   background: #020617;
   padding: 24px;
   border-radius: 14px;
@@ -59,4 +60,5 @@ button:active {
   font-size: 14px;
   text-align: center;
 }
+
 
